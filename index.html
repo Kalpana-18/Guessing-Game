@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Guess the Number</h1>
+        <div id="game">
+            <p>Enter the maximum number:</p>
+            <input type="number" id="max-number" min="1">
+            <button id="start-game">Start Game</button>
+        </div>
+        <div id="play" style="display: none;">
+            <p>Guess a number between 1 and <span id="max-num"></span>:</p>
+            <input type="number" id="guess" min="1">
+            <button id="submit-guess">Submit Guess</button>
+            <p id="result"></p>
+        </div>
+    </div>
+
+    <!-- Reward Modal -->
+    <div id="reward-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Congratulations!</h2>
+            <p>You guessed the correct number!</p>
+            <p id="attempts-count"></p>
+            <img src="image.png" alt="Reward Image">
+            <button id="play-again">Play Again</button>
+        </div>
+    </div>
+
+    <script src="guessgame.js"></script>
+</body>
+</html>
